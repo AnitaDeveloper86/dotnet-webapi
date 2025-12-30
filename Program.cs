@@ -9,6 +9,7 @@ app.MapPost("/student", (Student student) =>
 {
     using SqlConnection con = new SqlConnection(connectionString);
     con.Open();
+    // test
 
     string query = "INSERT INTO Students (Name,Age,Email,City) VALUES (@Name, @Age,@Email,@City)";
     using SqlCommand cmd = new SqlCommand(query, con);
